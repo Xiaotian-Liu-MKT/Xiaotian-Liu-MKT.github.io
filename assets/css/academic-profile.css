@@ -13,7 +13,7 @@
 
 .profile-page .page__title { display: none; }
 .profile-page .page__content { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif; color: var(--profile-ink); }
-.profile-shell { max-width: 1050px; margin: 0 auto; }
+.profile-shell { max-width: 1050px; min-width: 0; margin: 0 auto; }
 .profile-hero { border-top: 5px solid var(--profile-accent); border-bottom: 1px solid var(--profile-line); padding: 2.75rem 0 2rem; margin: 0 0 2.5rem; }
 .profile-eyebrow { color: var(--profile-accent); font-family: "Trebuchet MS", sans-serif; font-size: .76rem; font-weight: 700; letter-spacing: .13em; margin: 0 0 .75rem; text-transform: uppercase; }
 .profile-hero h1, .profile-section h2 { color: var(--profile-ink); font-family: "Iowan Old Style", Georgia, serif; letter-spacing: -.025em; }
@@ -55,9 +55,64 @@
 .profile-capabilities strong { display: block; font-family: "Trebuchet MS", sans-serif; font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; }
 .profile-cv-header { margin-bottom: 2rem; }
 .profile-cv-header h1 { font-family: "Iowan Old Style", Georgia, serif; font-size: clamp(2.25rem, 5vw, 3.7rem); margin-bottom: .35rem; }
+
+.profile-card,
+.profile-pipeline li,
+.profile-detail-list li,
+.profile-capabilities p {
+  min-width: 0;
+}
+
+.profile-card h3,
+.profile-pipeline h3,
+.profile-detail-list h3,
+.profile-tag,
+.profile-status,
+.profile-meta,
+.profile-links a,
+.profile-button {
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 720px) {
-  .profile-hero { padding-top: 1.75rem; }
+  #main { margin-top: 1.25rem; padding-left: .9rem; padding-right: .9rem; }
+  .profile-hero { margin-bottom: 2rem; padding: 1.75rem 0 1.5rem; }
   .profile-grid, .profile-two-column, .profile-capabilities { grid-template-columns: 1fr; }
-  .profile-links { gap: .4rem; }
-  .profile-links a, .profile-button { font-size: .78rem; padding: .45rem .58rem; }
+  .profile-two-column { gap: .75rem; }
+  .profile-section { margin-bottom: 2.25rem; }
+  .profile-section h2 { align-items: flex-start; flex-wrap: wrap; column-gap: .55rem; row-gap: .25rem; font-size: clamp(1.5rem, 8vw, 1.85rem); }
+  .profile-section h2 span { flex: 0 0 auto; padding-top: .32rem; }
+  .profile-lead { font-size: 1.05rem; line-height: 1.65; }
+  .profile-meta { font-size: .86rem; line-height: 1.6; }
+  .profile-grid { gap: .8rem; }
+  .profile-card { box-shadow: 3px 3px 0 rgba(0, 108, 103, .06); padding: 1rem; }
+  .profile-card h3, .profile-pipeline h3, .profile-detail-list h3 { font-size: 1.07rem; line-height: 1.33; }
+  .profile-status { font-size: .72rem; line-height: 1.35; margin: .4rem .25rem 0 0; max-width: 100%; }
+  .profile-detail-list li { margin-bottom: 1rem; padding-left: .8rem; }
+  .profile-callout { padding: 1.2rem; }
+  .profile-links { gap: .45rem; }
+  .profile-links a, .profile-button {
+    align-items: center;
+    display: inline-flex;
+    font-size: .82rem;
+    justify-content: center;
+    min-height: 44px;
+    padding: .55rem .68rem;
+  }
+  .masthead__inner-wrap { padding-left: .75rem; padding-right: .75rem; }
+  .greedy-nav { min-width: 0; }
+  .greedy-nav a { align-items: center; display: flex; min-height: 44px; margin-left: .6rem; margin-right: .6rem; padding-bottom: .45rem; padding-top: .45rem; }
+  .greedy-nav button { height: 44px; min-width: 44px; }
+  .greedy-nav .hidden-links { margin-top: 8px; max-width: calc(100vw - 1.5rem); }
+  .greedy-nav .hidden-links a { min-height: 44px; padding: .55rem .8rem; }
+}
+
+@media (max-width: 380px) {
+  #main { padding-left: .75rem; padding-right: .75rem; }
+  .profile-hero h1 { font-size: 2.15rem; }
+  .profile-role { font-size: 1rem; }
+  .profile-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-links li:last-child { grid-column: 1 / -1; }
+  .profile-links a { width: 100%; }
+  .profile-card { padding: .9rem; }
 }
