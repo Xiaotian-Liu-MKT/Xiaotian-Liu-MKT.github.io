@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Xiaotian Liu's Page"
+title                    : "Xiaotian Liu | Marketing Scholar"
 title_separator          : "-"
 name                     : &name "Xiaotian Liu"
-description              : &description "PhD candidate at the University of Queensland. Research on AI, service robots, and digital platforms in consumer decision-making and prosocial outcomes."
+description              : &description "Marketing scholar and PhD Candidate at The University of Queensland researching AI-mediated consumer and service interactions, digital platforms, and prosocial behaviour."
 url                      : https://xiaotian-liu-mkt.github.io # the base hostname & protocol for your site
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "https://github.com/Xiaotian-Liu-MKT/Xiaotian-Liu-MKT.github.io"
@@ -23,7 +23,7 @@ repository               : "https://github.com/Xiaotian-Liu-MKT/Xiaotian-Liu-MKT
 author:
   # Biographic information
   avatar           : "profile-2026.png"
-  bio              : "PhD Candidate in Marketing, UQ. Research on AI, consumer emotions, and prosocial marketing."
+  bio              : "Marketing scholar researching AI, digital platforms, and prosocial consumer behaviour."
   name             : "Xiaotian Liu"
   location         : "Brisbane, Queensland, Australia"
   employer         : "The University of Queensland"
@@ -199,7 +199,7 @@ collections:
   teaching:
     output: false
   publications:
-    output: true
+    output: false
     permalink: /:collection/:path/
   portfolio:
     output: true

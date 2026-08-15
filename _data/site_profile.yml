@@ -1,0 +1,147 @@
+profile:
+  name: Xiaotian Liu
+  role: Marketing scholar and PhD Candidate, The University of Queensland
+  location: Brisbane, Australia
+  email: xiaotian.liu@uq.edu.au
+  scholar: https://scholar.google.com/citations?user=exW3X_YAAAAJ
+  orcid: https://orcid.org/0000-0001-7580-5012
+  linkedin: https://www.linkedin.com/in/xiaotian-liu-806379187/
+  github: https://github.com/Xiaotian-Liu-MKT
+  research_statement: >-
+    I study how AI cues, platform design, recommendation interfaces, online auctions,
+    immersive commerce, and marketplace claims shape consumer judgement and market outcomes.
+    My work focuses especially on sustainable and prosocial behaviour, digital marketing,
+    and AI-mediated service interactions.
+  methods: Behavioural experiments, online and field studies, platform and secondary data, predictive modelling, and AI-assisted research workflows.
+  doctoral_status: Written examiner reports received; oral examination scheduled for late August 2026; degree completion anticipated in 2026.
+
+featured_publications:
+  - title: "When AI disclosure makes charities seem less communal: The downside of disclosing AI-generated suggested donation amounts"
+    authors: Liu, X., Song, X., & Nguyen, M.
+    venue: Journal of Retailing and Consumer Services, 94, 104968 (2027)
+    ranking: ABDC A
+    doi: https://doi.org/10.1016/j.jretconser.2026.104968
+  - title: "From image to expression: how social image drives plant-based meat purchase intention"
+    authors: Li, J., Haratbar, H. R., & Liu, X.
+    venue: Food Quality and Preference, 143, 105943 (2026)
+    ranking: ABDC A
+    doi: https://doi.org/10.1016/j.foodqual.2026.105943
+  - title: "I Value the Future, but We Value the Past: The Impact of Self-Construal on Nostalgia Versus Forestalgia Narrative Ads"
+    authors: Wu, M., Shou, Z., Su, S. J., & Liu, X.
+    venue: Psychology & Marketing, 42, 727–740 (2025)
+    ranking: ABS 3; ABDC A
+    doi: https://doi.org/10.1002/mar.22148
+  - title: The reference price effect of historical price lists in online auctions
+    authors: Liu, X., & Popkowski Leszczyc, P. T. L.
+    venue: Journal of Retailing and Consumer Services, 2023, 103183
+    ranking: ABDC A
+    doi: https://doi.org/10.1016/j.jretconser.2022.103183
+
+pipeline:
+  - title: Can Robots Replace Human Fundraisers? The Role of Moral Self-Awareness in Charitable Giving
+    authors: Liu, X., Pontes, N., & Popkowski Leszczyc, P. T. L.
+    status: under review (1st round)
+    venue: Journal of Service Research
+    ranking: ABS 4; ABDC A*
+  - title: AI-trained service providers? NO! The mediating role of perceived tacit knowledge
+    authors: Liu, X., Goyeneche, D., Haratbar, H. R., Pontes, N., & Popkowski Leszczyc, P. T. L.
+    status: under review (1st round)
+    venue: Journal of the Academy of Marketing Science
+    ranking: ABS 4*; ABDC A*
+    note: Corresponding author.
+  - title: Temporal Overlap, Valuation Uncertainty, and Price Formation in Digital Auctions
+    authors: Liu, X., Meng, L., Han, J., & Popkowski Leszczyc, P. T. L.
+    status: revise and resubmit (2nd round)
+    venue: European Journal of Marketing
+    ranking: ABS 3; ABDC A*
+  - title: "From Solo to Collective: How Group Visual Cues Activate Anticipated Effervescence in Volunteer Recruitment"
+    authors: Chen, D., Liu, X., Nguyen, M., Song, X., & Yu, X.
+    status: minor revision (3rd round)
+    venue: European Journal of Marketing
+    ranking: ABS 3; ABDC A*
+    note: Equal contribution.
+  - title: Do Synthetic Consumers Browse? Journey Compression in Generative-AI Representations of the Online Shopping Journey
+    authors: Liu, X.
+    status: under review (1st round)
+    venue: Journal of Internet Commerce
+  - title: "Bidding Under Exposure Risk: How Auction Format Shapes Bidding Strategies in Multi-Item Auctions"
+    authors: Liu, X., Popkowski Leszczyc, P. T. L., & Allenby, G. M.
+    status: Target journal
+    venue: Marketing Science
+    ranking: ABS 4*; ABDC A*
+
+teaching:
+  overview: >-
+    Teaching across undergraduate and postgraduate digital marketing, market and consumer research,
+    business analytics, and business research strategy. I connect research-informed marketing education
+    with applied digital skills, analytics decision frameworks, experimentation, inclusive learning design,
+    and industry-engaged assessment.
+  roles:
+    - course: MKTG3506 Digital Marketing and Social Media
+      level: Undergraduate
+      period: S1 2026
+      detail: Delivered tutorials for approximately 60 students across two groups, covering digital strategy, social media, influencer marketing, SEO audit, customer experience, and campaign development.
+      metric: Overall tutor rating 4.62/5
+    - course: MKTG7510 Market and Consumer Research
+      level: Postgraduate
+      period: S1 2025 and S1 2026
+      detail: Supported research design, attitudinal measurement, segmentation, SPSS and Qualtrics, and translation of data into applied insight; contributed to an industry-partnered, inclusive assessment redesign in 2026.
+      metric: S1 2026 overall tutor rating 4.78/5
+    - course: BSAN2204 Methods of Business Analytics
+      level: Undergraduate
+      period: S1 2026
+      detail: Delivered tutorials for approximately 120 students across four groups, developing R programming, data manipulation, exploration, predictive modelling, and code optimisation capability.
+      metric: Overall tutor rating 4.38/5
+    - course: RBUS3900 Business Research Strategy
+      level: Undergraduate
+      period: S2 2026
+      detail: Current teaching in business research strategy, research design, and evidence-based decision making.
+    - course: BSAN4201 Business Analytics Strategy
+      level: Undergraduate · Co-Lecturer
+      period: S2 2026
+      detail: Co-teaching a 64-student course; leading the 3-hour workshop across 5–6 weeks, supporting projects and assessments, and teaching data-to-decisions, experimentation, AI/data monetisation, and AI-enabled smart-service design.
+  development: HEA@UQ Program — Associate Fellowship (AFHEA) application in preparation, aligned with PSF 2023 Descriptor 1.
+
+service_tools:
+  service:
+    - title: EQUIS Accreditation Student Lead
+      period: 2023–2024
+      detail: Authored UQ Business School’s official EQUIS Student Report and coordinated student and faculty stakeholder input.
+    - title: Ad Hoc Reviewer
+      period: 2023–Present
+      detail: "Journal of Experimental Psychology: Applied; Psychology & Marketing; Information Economics and Policy; Bulletin of Economic Research. ANZMAC Annual Conference reviewer, 2023, 2024, 2026."
+    - title: Research co-supervision
+      period: 2024–Present
+      detail: Co-supervising undergraduate and MPhil research in AI sustainability disclosure and explainable human–AI collaboration.
+  tools:
+    - name: LitRelevanceAI
+      url: https://github.com/Xiaotian-Liu-MKT/LitRelevanceAI
+      detail: Literature screening for relevance from research-database exports.
+    - name: PaperFeed
+      url: https://github.com/Xiaotian-Liu-MKT/paper-feed
+      detail: Academic-paper RSS monitoring and keyword filtering.
+    - name: GPT-as-Participants
+      url: https://github.com/Xiaotian-Liu-MKT/GPT-as-participants
+      detail: LLM-based experimental prototyping.
+
+cv_summary:
+  education:
+    - degree: PhD Candidate (Marketing)
+      institution: The University of Queensland
+      period: 2022–Present
+      detail: "Dissertation by publication — Mitigating Embarrassment and Motivating Guilt: Consumer Emotion Management in the Age of AI."
+    - degree: Marketing Models (PhD Level)
+      institution: The Ohio State University
+      period: 2022
+      detail: Supervised by Professor Greg Allenby.
+    - degree: Bachelor of Business Management (Honours)
+      institution: The University of Queensland
+      period: 2021
+      detail: First Class Honours; GPA 7.0/7.0; Dean’s Commendation for Academic Excellence.
+  capabilities:
+    - label: Analysis and modelling
+      value: R, Python, SPSS, and SAS
+    - label: Survey research
+      value: Qualtrics
+    - label: Languages
+      value: Mandarin Chinese and Shanghainese/Wu Chinese (native); English (professional proficiency)

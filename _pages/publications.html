@@ -1,36 +1,46 @@
 ---
-layout: archive
-title: "Publications"
+layout: single
+title: ""
 permalink: /publications/
-author_profile: true
+author_profile: false
+classes: wide profile-page
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+{% assign site_profile = site.data.site_profile %}
+{% include site-profile-styles.html %}
 
-{% include base_path %}
+<div class="profile-shell">
+  <header class="profile-cv-header">
+    <p class="profile-eyebrow">Research record</p>
+    <h1>Publications &amp; pipeline</h1>
+    <p class="profile-lead">For a complete, current record, see <a href="{{ site_profile.profile.scholar }}">Google Scholar</a> or download the <a href="{{ site.baseurl }}/files/Xiaotian_Liu_CV.pdf">academic CV</a>.</p>
+  </header>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  <section class="profile-section">
+    <h2><span>Published</span>Peer-reviewed publications</h2>
+    <div class="profile-grid">
+      {% for publication in site_profile.featured_publications %}
+      <article class="profile-card">
+        <p class="profile-tag">{{ publication.venue }}{% if publication.ranking %} · {{ publication.ranking }}{% endif %}</p>
+        <h3>{% if publication.doi %}<a href="{{ publication.doi }}">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}</h3>
+        <p>{{ publication.authors }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
 
-
-
+  <section class="profile-section">
+    <h2><span>Active</span>Research pipeline</h2>
+    <ul class="profile-pipeline">
+      {% for paper in site_profile.pipeline %}
+      <li>
+        <h3>{{ paper.title }}</h3>
+        <p>{{ paper.authors }}</p>
+        <span class="profile-status">{{ paper.status }}</span>
+        <span class="profile-status">{{ paper.venue }}{% if paper.ranking %} · {{ paper.ranking }}{% endif %}</span>
+        {% if paper.note %}<p>{{ paper.note }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

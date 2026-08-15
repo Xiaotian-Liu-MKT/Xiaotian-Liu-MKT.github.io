@@ -1,68 +1,37 @@
 ---
-layout: archive
-title: "Teaching"
+layout: single
+title: ""
 permalink: /teaching/
-author_profile: true
+author_profile: false
+classes: wide profile-page
 ---
 
-{% include base_path %}
+{% assign site_profile = site.data.site_profile %}
+{% include site-profile-styles.html %}
 
-{% capture teaching_intro %}
-My teaching approach is grounded in **AI-enabled pedagogy**, **experiential learning**, and **inclusive education**. I strive to prepare students for the rapidly evolving data-driven marketing landscape by integrating emerging technologies (e.g., generative AI, LLMs, and digital simulations) with core theoretical foundations. My goal is to foster critical thinking and practical skills that empower students to navigate and lead in the age of AI.
-{% endcapture %}
-{{ teaching_intro | markdownify }}
+<div class="profile-shell">
+  <header class="profile-cv-header">
+    <p class="profile-eyebrow">Teaching &amp; learning</p>
+    <h1>Research-informed, applied teaching</h1>
+    <p class="profile-lead">{{ site_profile.teaching.overview }}</p>
+  </header>
 
-<style>
-  .teaching-item {
-    border: 1px solid #e6e6e6;
-    border-radius: 8px;
-    padding: 0.75rem 0.9rem;
-    margin: 1rem 0;
-    background: #fff;
-  }
-  .teaching-item summary {
-    cursor: pointer;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-  .teaching-item summary::-webkit-details-marker {
-    display: none;
-  }
-  .teaching-item summary:before {
-    content: "+";
-    display: inline-block;
-    width: 1rem;
-    margin-right: 0.35rem;
-  }
-  .teaching-item[open] summary:before {
-    content: "–";
-  }
-  .teaching-meta {
-    margin: 0.5rem 0 0.75rem;
-    color: #666;
-    font-size: 0.95em;
-  }
-  .teaching-meta span {
-    display: inline-block;
-    margin-right: 1rem;
-  }
-</style>
+  <section class="profile-section">
+    <h2><span>Current record</span>University of Queensland Business School</h2>
+    <ul class="profile-detail-list">
+      {% for role in site_profile.teaching.roles %}
+      <li>
+        <h3>{{ role.course }}</h3>
+        <p><strong>{{ role.level }} · {{ role.period }}</strong></p>
+        <p>{{ role.detail }}</p>
+        {% if role.metric %}<p><strong>{{ role.metric }}</strong></p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-{% for post in site.teaching reversed %}
-  <details class="teaching-item">
-    <summary>
-      <span>{{ post.title }}</span>
-      {% if post.date %}<span>{{ post.date | default: "1900-01-01" | date: "%Y" }}</span>{% endif %}
-    </summary>
-    <div class="teaching-meta">
-      {% if post.venue %}<span><strong>Institution:</strong> {{ post.venue }}</span>{% endif %}
-      {% if post.type %}<span><strong>Role:</strong> {{ post.type }}</span>{% endif %}
-      {% if post.location %}<span><strong>Location:</strong> {{ post.location }}</span>{% endif %}
-    </div>
-    <div class="teaching-body">
-      {{ post.content }}
-    </div>
-  </details>
-{% endfor %}
+  <section class="profile-section profile-callout">
+    <h2><span>Development</span>Professional learning</h2>
+    <p>{{ site_profile.teaching.development }}</p>
+  </section>
+</div>

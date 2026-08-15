@@ -1,37 +1,44 @@
 ---
-layout: archive
-title: "Service & Leadership"
+layout: single
+title: ""
 permalink: /service/
-author_profile: true
+author_profile: false
+classes: wide profile-page
 ---
 
-{% include base_path %}
+{% assign site_profile = site.data.site_profile %}
+{% include site-profile-styles.html %}
 
-### Leadership Roles
-*   **EQUIS Accreditation Student Lead**, University of Queensland Business School (2023–2024)
-    *   Led stakeholder engagement and authored the Student Report for the EQUIS international accreditation process.
-    *   Synthesized complex survey and focus group data into actionable insights for the school's leadership team.
-    *   Collaborated with senior executives to represent the student voice during the peer review visit.
+<div class="profile-shell">
+  <header class="profile-cv-header">
+    <p class="profile-eyebrow">Academic contribution</p>
+    <h1>Service &amp; research tools</h1>
+    <p class="profile-lead">Service, co-supervision, and transparent research tooling complement my research and teaching practice.</p>
+  </header>
 
-### Professional Service
-*   **Ad Hoc Reviewer**
-    *   *Psychology & Marketing* (ABDC A)
-    *   *Information Economics and Policy* (ABDC A)
-    *   *Bulletin of Economic Research* (ABDC B)
-*   **Conference Reviewing**
-    *   Australian and New Zealand Marketing Academy (ANZMAC) Conference (2023, 2024)
-
-### Open-Source Research Tools
-*   **Paper Feed** — Journal subscription tool with filtering and favorites. [GitHub](https://github.com/Xiaotian-Liu-MKT/paper-feed)
-*   **Stimulus Generator** — Generates advertising stimuli for marketing experiments. [GitHub](https://github.com/Xiaotian-Liu-MKT/stimulus-generator)
-*   **Lit Relevance AI** — Screens Scopus/WoS exports by customizable relevance criteria. [GitHub](https://github.com/Xiaotian-Liu-MKT/LitRelevanceAI)
-*   **GPT as Participants** — LLM-based synthetic participants for scenario experiments. [GitHub](https://github.com/Xiaotian-Liu-MKT/GPT-as-participants)
-*   **Search Paper by Embedding** — Embedding-based search over Scopus exports. [GitHub](https://github.com/Xiaotian-Liu-MKT/SearchPaperByEmbedding)
-
-### Community & Collegiality
-*   **Conference Volunteering**
-    *   Australian and New Zealand Marketing Academy (ANZMAC) Conference (2023, 2024)
-    *   26th Labour Econometrics Workshop (2024)
-*   **Peer Mentoring**
-    *   Providing ongoing support to junior PhD students in research design, experimental methodology, and academic manuscript development.
-    *   Supervising master's student training in research methods and academic writing at Jiangsu University of Science and Technology and the University of Macau.
+  <section class="profile-section profile-two-column">
+    <div>
+      <h2><span>Service</span>Academic contribution</h2>
+      <ul class="profile-detail-list">
+        {% for item in site_profile.service_tools.service %}
+        <li>
+          <h3>{{ item.title }}</h3>
+          <p><strong>{{ item.period }}</strong></p>
+          <p>{{ item.detail }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2><span>Tools</span>Open research software</h2>
+      <ul class="profile-detail-list">
+        {% for tool in site_profile.service_tools.tools %}
+        <li>
+          <h3><a href="{{ tool.url }}">{{ tool.name }}</a></h3>
+          <p>{{ tool.detail }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</div>

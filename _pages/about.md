@@ -1,41 +1,73 @@
 ---
 permalink: /
-title: "Xiaotian Liu"
-author_profile: true
+title: ""
+layout: single
+author_profile: false
+classes: wide profile-page
 ---
 
-My research examines how emerging technologies (e.g., **AI**, **service robots**, and **digital platforms**) shape consumer decision-making and **prosocial outcomes**, with a particular interest in translating behavioural theory into data-driven marketing practice that delivers actionable managerial implications.
+{% assign site_profile = site.data.site_profile %}
+{% include site-profile-styles.html %}
 
-My PhD dissertation comprises two papers unified by a focus on **consumer self-conscious emotions** in service contexts: the first examines how communication styles alleviate consumer embarrassment in sensitive service encounters, identifying service agent type (human vs. robot) as a key boundary condition; the second demonstrates that robotic fundraisers attenuate moral self-awareness, thereby reducing charitable giving.
+<div class="profile-shell">
+  <header class="profile-hero">
+    <p class="profile-eyebrow">Marketing · AI · Consumer Behaviour</p>
+    <h1>{{ site_profile.profile.name }}</h1>
+    <p class="profile-role">{{ site_profile.profile.role }} · {{ site_profile.profile.location }}</p>
+    <ul class="profile-links">
+      <li><a href="{{ site_profile.profile.scholar }}">Google Scholar</a></li>
+      <li><a href="{{ site_profile.profile.orcid }}">ORCID</a></li>
+      <li><a href="{{ site_profile.profile.linkedin }}">LinkedIn</a></li>
+      <li><a href="{{ site_profile.profile.github }}">GitHub</a></li>
+      <li><a class="profile-button--primary" href="{{ site.baseurl }}/files/Xiaotian_Liu_CV.pdf">Download CV</a></li>
+    </ul>
+  </header>
 
-My future research agenda extends to the role of **AI in digital marketing, services, sustainability, and prosocial marketing**, aiming to provide insights that directly inform industry practice and enhance consumer wellbeing and societal outcomes. I primarily employ experimental designs, including **social media field experiments**, complemented by skills in econometric analysis, Bayesian modeling, and biometric methods. I also integrate **AI-enabled tools** into my teaching practice, preparing students for data-driven marketing careers.
+  <section class="profile-section">
+    <h2><span>01</span>Research profile</h2>
+    <p class="profile-lead">{{ site_profile.profile.research_statement }}</p>
+    <p class="profile-meta"><strong>Methods:</strong> {{ site_profile.profile.methods }}<br><strong>Doctoral status:</strong> {{ site_profile.profile.doctoral_status }}</p>
+  </section>
 
-## Highlights
-- **Paper Under Review** at *Journal of Consumer Psychology* [FT50, ABDC A*]
-- **Major Revision** at *European Journal of Marketing* [ABDC A*]
-- **Published** in *Journal of Retailing and Consumer Services* & *Psychology & Marketing*
-- **ACR 2025** poster presentation (Washington, DC)
-- **GPA 7.0/7.0** (Honours), First Class Honours
-- **NSFC Grant** core team member (No. 72374088)
+  <section class="profile-section">
+    <h2><span>02</span>Selected publications</h2>
+    <div class="profile-grid">
+      {% for publication in site_profile.featured_publications %}
+      <article class="profile-card">
+        <p class="profile-tag">{{ publication.venue }}{% if publication.ranking %} · {{ publication.ranking }}{% endif %}</p>
+        <h3>{% if publication.doi %}<a href="{{ publication.doi }}">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}</h3>
+        <p>{{ publication.authors }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <p><a class="profile-button" href="{{ site.baseurl }}/publications/">View research record</a></p>
+  </section>
 
-## News
-- [2026] Teaching MKTG3506 Digital Marketing and Social Media
-- [2025] Poster at ACR Conference, Washington, DC
-- [2025] Paper under review at Journal of Consumer Psychology
-- [2025] Major revision at European Journal of Marketing
-- [2025] Industry consulting: electric truck startup strategy
-- [2024] NSFC grant: Human-AI Collaboration (Grant No. 72374088)
-- [2023] Published in Journal of Retailing and Consumer Services
+  <section class="profile-section">
+    <h2><span>03</span>Current research pipeline</h2>
+    <ul class="profile-pipeline">
+      {% for paper in site_profile.pipeline limit:5 %}
+      <li>
+        <h3>{{ paper.title }}</h3>
+        <p>{{ paper.authors }}</p>
+        <span class="profile-status">{{ paper.status }}</span>
+        <span class="profile-status">{{ paper.venue }}{% if paper.ranking %} · {{ paper.ranking }}{% endif %}</span>
+        {% if paper.note %}<p>{{ paper.note }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-## Research Themes
-- AI and service interactions
-- Consumer self-conscious emotions in sensitive service contexts
-- Prosocial marketing and charitable giving
-- Digital marketing and social media field experiments
-
-## Quick Links
-- [Download CV as PDF](/files/Xiaotian_Liu_CV.pdf){: .btn .btn--primary}
-- [Publications](/publications/)
-- [Google Scholar]({{ site.author.googlescholar }})
-- [ORCID]({{ site.author.orcid }})
-- [GitHub](https://github.com/{{ site.author.github }})
+  <section class="profile-section profile-two-column">
+    <div>
+      <h2><span>04</span>Teaching</h2>
+      <p>{{ site_profile.teaching.overview }}</p>
+      <p><a class="profile-button" href="{{ site.baseurl }}/teaching/">Teaching experience</a></p>
+    </div>
+    <div>
+      <h2><span>05</span>Service &amp; tools</h2>
+      <p>Academic service, research co-supervision, and open research tools support my research and teaching practice.</p>
+      <p><a class="profile-button" href="{{ site.baseurl }}/service/">Service &amp; tools</a></p>
+    </div>
+  </section>
+</div>

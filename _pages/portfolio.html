@@ -1,15 +1,5 @@
 ---
-layout: archive
-title: "Portfolio"
+layout: single
 permalink: /portfolio/
-author_profile: true
+redirect_to: /service/
 ---
-
-{% include base_path %}
-
-
-{% assign portfolio_items = site.portfolio | sort: "title" %}
-{% for post in portfolio_items %}
-  {% include archive-single.html %}
-{% endfor %}
-
