@@ -17,27 +17,35 @@ classes: wide profile-page
   </header>
 
   <section class="profile-section">
-    <h2><span>Published</span>Peer-reviewed publications</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">Published</p>
+      <h2>Peer-reviewed publications</h2>
+    </div>
     <div class="profile-grid">
       {% for publication in site_profile.featured_publications %}
       <article class="profile-card">
-        <p class="profile-tag">{{ publication.venue }}{% if publication.ranking %} · {{ publication.ranking }}{% endif %}</p>
+        <p class="profile-publication-venue"><em>{{ publication.journal }}</em>{% if publication.citation %}<span>{{ publication.citation }}</span>{% endif %}</p>
         <h3>{% if publication.doi %}<a href="{{ publication.doi }}">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}</h3>
         <p>{{ publication.authors }}</p>
+        {% if publication.ranking %}<span class="profile-publication-rank">{{ publication.ranking }}</span>{% endif %}
       </article>
       {% endfor %}
     </div>
   </section>
 
   <section class="profile-section">
-    <h2><span>Active</span>Research pipeline</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">Active</p>
+      <h2>Research pipeline</h2>
+    </div>
     <ul class="profile-pipeline">
       {% for paper in site_profile.pipeline %}
       <li>
         <h3>{{ paper.title }}</h3>
         <p>{{ paper.authors }}</p>
+        <p class="profile-pipeline-venue"><em>{{ paper.venue }}</em></p>
         <span class="profile-status">{{ paper.status }}</span>
-        <span class="profile-status">{{ paper.venue }}{% if paper.ranking %} · {{ paper.ranking }}{% endif %}</span>
+        {% if paper.ranking %}<span class="profile-publication-rank">{{ paper.ranking }}</span>{% endif %}
         {% if paper.note %}<p>{{ paper.note }}</p>{% endif %}
       </li>
       {% endfor %}

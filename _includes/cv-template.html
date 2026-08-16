@@ -14,26 +14,35 @@
   </header>
 
   <section class="profile-section">
-    <h2><span>Summary</span>Research &amp; teaching</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">Summary</p>
+      <h2>Research &amp; teaching</h2>
+    </div>
     <p class="profile-lead">{{ site_profile.profile.research_statement }}</p>
     <p class="profile-meta"><strong>Doctoral status:</strong> {{ site_profile.profile.doctoral_status }}</p>
   </section>
 
   <section class="profile-section">
-    <h2><span>Education</span>Qualifications</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">Education</p>
+      <h2>Qualifications</h2>
+    </div>
     <ul class="profile-detail-list">
       {% for item in site_profile.cv_summary.education %}
       <li>
         <h3>{{ item.degree }}</h3>
-        <p><strong>{{ item.institution }} · {{ item.period }}</strong></p>
-        <p>{{ item.detail }}</p>
+        <p class="profile-item-meta">{{ item.institution }} · {{ item.period }}</p>
+        <p class="profile-item-summary">{{ item.detail }}</p>
       </li>
       {% endfor %}
     </ul>
   </section>
 
   <section class="profile-section">
-    <h2><span>Capabilities</span>Digital &amp; research software</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">Capabilities</p>
+      <h2>Digital &amp; research software</h2>
+    </div>
     <div class="profile-capabilities">
       {% for item in site_profile.cv_summary.capabilities %}
       <p><strong>{{ item.label }}</strong>{{ item.value }}</p>
@@ -42,7 +51,10 @@
   </section>
 
   <section class="profile-section profile-callout">
-    <h2><span>Download</span>Full academic CV</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">Download</p>
+      <h2>Full academic CV</h2>
+    </div>
     <p>The PDF CV contains the complete publication record, conference activity, teaching, grants, industry engagement, and referees.</p>
     <a class="profile-button profile-button--primary" href="{{ site.baseurl }}/files/Xiaotian_Liu_CV.pdf">Download current CV (PDF)</a>
   </section>

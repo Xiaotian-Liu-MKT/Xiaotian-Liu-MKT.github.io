@@ -17,21 +17,27 @@ classes: wide profile-page
   </header>
 
   <section class="profile-section">
-    <h2><span>Current record</span>University of Queensland Business School</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">Current record</p>
+      <h2>University of Queensland Business School</h2>
+    </div>
     <ul class="profile-detail-list">
       {% for role in site_profile.teaching.roles %}
-      <li>
+      <li class="teaching-record">
         <h3>{{ role.course }}</h3>
-        <p><strong>{{ role.level }} · {{ role.period }}</strong></p>
-        <p>{{ role.detail }}</p>
-        {% if role.metric %}<p><strong>{{ role.metric }}</strong></p>{% endif %}
+        <p class="profile-item-meta">{{ role.level }} · {{ role.period }}</p>
+        <p class="profile-item-summary">{{ role.detail }}</p>
+        {% if role.metric %}<p class="teaching-rating">{{ role.metric }}</p>{% endif %}
       </li>
       {% endfor %}
     </ul>
   </section>
 
   <section class="profile-section profile-callout">
-    <h2><span>Development</span>Professional learning</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">Development</p>
+      <h2>Professional learning</h2>
+    </div>
     <p>{{ site_profile.teaching.development }}</p>
   </section>
 </div>

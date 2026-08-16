@@ -24,19 +24,26 @@ classes: wide profile-page
   </header>
 
   <section class="profile-section">
-    <h2><span>01</span>Research profile</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">01</p>
+      <h2>Research profile</h2>
+    </div>
     <p class="profile-lead">{{ site_profile.profile.research_statement }}</p>
     <p class="profile-meta"><strong>Methods:</strong> {{ site_profile.profile.methods }}<br><strong>Doctoral status:</strong> {{ site_profile.profile.doctoral_status }}</p>
   </section>
 
   <section class="profile-section">
-    <h2><span>02</span>Selected publications</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">02</p>
+      <h2>Selected publications</h2>
+    </div>
     <div class="profile-grid">
       {% for publication in site_profile.featured_publications %}
       <article class="profile-card">
-        <p class="profile-tag">{{ publication.venue }}{% if publication.ranking %} · {{ publication.ranking }}{% endif %}</p>
+        <p class="profile-publication-venue"><em>{{ publication.journal }}</em>{% if publication.citation %}<span>{{ publication.citation }}</span>{% endif %}</p>
         <h3>{% if publication.doi %}<a href="{{ publication.doi }}">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}</h3>
         <p>{{ publication.authors }}</p>
+        {% if publication.ranking %}<span class="profile-publication-rank">{{ publication.ranking }}</span>{% endif %}
       </article>
       {% endfor %}
     </div>
@@ -44,14 +51,18 @@ classes: wide profile-page
   </section>
 
   <section class="profile-section">
-    <h2><span>03</span>Current research pipeline</h2>
+    <div class="profile-section-heading">
+      <p class="profile-section-kicker">03</p>
+      <h2>Current research pipeline</h2>
+    </div>
     <ul class="profile-pipeline">
       {% for paper in site_profile.pipeline limit:5 %}
       <li>
         <h3>{{ paper.title }}</h3>
         <p>{{ paper.authors }}</p>
+        <p class="profile-pipeline-venue"><em>{{ paper.venue }}</em></p>
         <span class="profile-status">{{ paper.status }}</span>
-        <span class="profile-status">{{ paper.venue }}{% if paper.ranking %} · {{ paper.ranking }}{% endif %}</span>
+        {% if paper.ranking %}<span class="profile-publication-rank">{{ paper.ranking }}</span>{% endif %}
         {% if paper.note %}<p>{{ paper.note }}</p>{% endif %}
       </li>
       {% endfor %}
@@ -60,12 +71,18 @@ classes: wide profile-page
 
   <section class="profile-section profile-two-column">
     <div>
-      <h2><span>04</span>Teaching</h2>
+      <div class="profile-section-heading">
+        <p class="profile-section-kicker">04</p>
+        <h2>Teaching</h2>
+      </div>
       <p>{{ site_profile.teaching.overview }}</p>
       <p><a class="profile-button" href="{{ site.baseurl }}/teaching/">Teaching experience</a></p>
     </div>
     <div>
-      <h2><span>05</span>Service &amp; tools</h2>
+      <div class="profile-section-heading">
+        <p class="profile-section-kicker">05</p>
+        <h2>Service &amp; tools</h2>
+      </div>
       <p>Academic service, research co-supervision, and open research tools support my research and teaching practice.</p>
       <p><a class="profile-button" href="{{ site.baseurl }}/service/">Service &amp; tools</a></p>
     </div>

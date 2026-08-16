@@ -18,22 +18,26 @@ profile:
 featured_publications:
   - title: "When AI disclosure makes charities seem less communal: The downside of disclosing AI-generated suggested donation amounts"
     authors: Liu, X., Song, X., & Nguyen, M.
-    venue: Journal of Retailing and Consumer Services, 94, 104968 (2027)
+    journal: Journal of Retailing and Consumer Services
+    citation: 94, 104968 (2027)
     ranking: ABDC A
     doi: https://doi.org/10.1016/j.jretconser.2026.104968
   - title: "From image to expression: how social image drives plant-based meat purchase intention"
     authors: Li, J., Haratbar, H. R., & Liu, X.
-    venue: Food Quality and Preference, 143, 105943 (2026)
+    journal: Food Quality and Preference
+    citation: 143, 105943 (2026)
     ranking: ABDC A
     doi: https://doi.org/10.1016/j.foodqual.2026.105943
   - title: "I Value the Future, but We Value the Past: The Impact of Self-Construal on Nostalgia Versus Forestalgia Narrative Ads"
     authors: Wu, M., Shou, Z., Su, S. J., & Liu, X.
-    venue: Psychology & Marketing, 42, 727–740 (2025)
+    journal: Psychology & Marketing
+    citation: 42, 727–740 (2025)
     ranking: ABS 3; ABDC A
     doi: https://doi.org/10.1002/mar.22148
   - title: The reference price effect of historical price lists in online auctions
     authors: Liu, X., & Popkowski Leszczyc, P. T. L.
-    venue: Journal of Retailing and Consumer Services, 2023, 103183
+    journal: Journal of Retailing and Consumer Services
+    citation: 2023, 103183
     ranking: ABDC A
     doi: https://doi.org/10.1016/j.jretconser.2022.103183
 

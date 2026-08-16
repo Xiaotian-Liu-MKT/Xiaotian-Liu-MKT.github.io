@@ -18,24 +18,30 @@ classes: wide profile-page
 
   <section class="profile-section profile-two-column">
     <div>
-      <h2><span>Service</span>Academic contribution</h2>
+      <div class="profile-section-heading">
+        <p class="profile-section-kicker">Service</p>
+        <h2>Academic contribution</h2>
+      </div>
       <ul class="profile-detail-list">
         {% for item in site_profile.service_tools.service %}
         <li>
           <h3>{{ item.title }}</h3>
-          <p><strong>{{ item.period }}</strong></p>
-          <p>{{ item.detail }}</p>
+          <p class="profile-item-meta">{{ item.period }}</p>
+          <p class="profile-item-summary">{{ item.detail }}</p>
         </li>
         {% endfor %}
       </ul>
     </div>
     <div>
-      <h2><span>Tools</span>Open research software</h2>
+      <div class="profile-section-heading">
+        <p class="profile-section-kicker">Tools</p>
+        <h2>Open research software</h2>
+      </div>
       <ul class="profile-detail-list">
         {% for tool in site_profile.service_tools.tools %}
         <li>
           <h3><a href="{{ tool.url }}">{{ tool.name }}</a></h3>
-          <p>{{ tool.detail }}</p>
+          <p class="profile-item-summary">{{ tool.detail }}</p>
         </li>
         {% endfor %}
       </ul>
